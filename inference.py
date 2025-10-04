@@ -57,7 +57,7 @@ class TransferNN(nn.Module):
 
 
 model = TransferNN(n_features=72).to(device)
-model.load_state_dict(torch.load('fine-tuned-weights.pth'),strict=False)
+model.load_state_dict(torch.load('fine-tuned-weights.pth', map_location=torch.device('cpu')),strict=False)
 
 
 test_transform = transforms.Compose([

@@ -2,3 +2,4 @@ images/train
 images/test
 archive
 .env
+__pycache__
