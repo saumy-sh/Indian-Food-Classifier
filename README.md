@@ -30,8 +30,6 @@ The food classes are:
 ## Training strategy
 # Pre-training
 I initially trained a ResNet50 model on Food101 dataset with 101 classes so that model can learn basic features of dishes. I used this dataset as it had around 69k training images and around 22k validation images which helped model generalise.
-Below is pre-training accuracy and loss for resnet50
-<img width="1500" height="500" alt="loss-accuracy_pre-trained" src="https://github.com/user-attachments/assets/4c6ab10e-e354-42b7-bd75-f431d8dd9ac3" />
 
 # Fine-tuning
 Then I created a local dataset containig 80 dishes with around 150-200 images each class. After filtering, I was left with 72 classes with approximately same number of images per class.
