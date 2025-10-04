@@ -1,6 +1,7 @@
 ## Indian Food Predictor(Image based)
 Helps in predicting the major Indian dishes out of the 72 major dishes it was trained on across India.
 
+Checkout the site [here](https://what-is-that.streamlit.app/)
 
 A simple streamlit based interface where you can either upload or take picture of your dish and then prediction is shown.
 Here are some images of the simple interface.

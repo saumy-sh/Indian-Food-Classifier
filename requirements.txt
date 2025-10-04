@@ -5,3 +5,4 @@ streamlit>=1.26.0
 numpy>=1.25.0
 Pillow>=10.0.0
 scikit-learn
+icrawler
