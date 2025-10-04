@@ -66,6 +66,9 @@ test_transform = transforms.Compose([
     transforms.ConvertImageDtype(torch.float)
 ])
 
+
+
+# testing
 dir_path = "indian_food_test"
 images = os.listdir(dir_path)
 img_paths = []
@@ -84,3 +87,16 @@ for img_path in images:
         print(pred)
         img_paths.append(img_path)
         predictions.append(pred)
+
+
+def predict(img):
+    model.to(device)
+    input_tensor = test_transform(img)
+    input_tensor = input_tensor.unsqueeze(0).to(device)
+    model.eval()
+    with torch.no_grad():
+        output = model(input_tensor)
+        pred_class_idx = torch.argmax(output, dim=1).item()
+        print(img_path)
+        predicted_class = label_encoder.inverse_transform([pred_class_idx])[0]
+    return predicted_class
