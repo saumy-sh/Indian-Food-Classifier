@@ -117,6 +117,8 @@ labels = train_df['labels'].unique()
 label_encoder = LabelEncoder()
 label_encoder.fit(labels)
 
+
+
 transform = transforms.Compose([
     transforms.Resize((224,224)),
     transforms.RandomHorizontalFlip(p=0.5),
