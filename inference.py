@@ -7,7 +7,7 @@ import torchvision.models as models
 import torch.nn as nn
 
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = torch.device('cpu')
 
 label_encoder = LabelEncoder()
 labels = [
